@@ -484,11 +484,11 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Experience list items
-        gsap.utils.toArray('.experience-list li').forEach((li, i) => {
-            gsap.from(li, {
+        // Experience table rows
+        gsap.utils.toArray('.exp-row').forEach((row, i) => {
+            gsap.from(row, {
                 scrollTrigger: {
-                    trigger: li,
+                    trigger: row,
                     start: 'top 90%',
                     once: true
                 },

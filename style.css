@@ -849,7 +849,7 @@ img {
 [data-scroll].visible .skill-category,
 [data-scroll].visible .achievement-card,
 [data-scroll].visible .project-featured-card,
-[data-scroll].visible .experience-list li {
+[data-scroll].visible .exp-row {
     transition-property: border-color, box-shadow, background;
 }
 
@@ -1223,43 +1223,54 @@ img {
     color: var(--accent);
 }
 
-.experience-list {
+.experience-table {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 8px;
     margin-bottom: 28px;
 }
 
-.experience-list li {
-    display: flex;
-    gap: 14px;
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    line-height: 1.75;
-    padding: 10px 16px;
-    border-radius: 10px;
+.exp-row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+    padding: 14px 18px;
+    border-radius: 12px;
     background: rgba(255, 255, 255, 0.015);
-    border-left: 2px solid rgba(var(--accent-rgb), 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.03);
     transition: all 0.3s ease;
+    align-items: start;
 }
 
-.experience-list li:hover {
+.exp-row:hover {
     background: rgba(var(--accent-rgb), 0.03);
-    border-left-color: var(--accent);
+    border-color: rgba(var(--accent-rgb), 0.15);
     transform: translateX(4px);
 }
 
-.experience-list li strong {
-    color: var(--text-primary);
+.exp-what {
+    font-family: var(--font-display);
+    font-size: 0.88rem;
     font-weight: 600;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
 }
 
-.exp-icon {
+.exp-what i {
     color: var(--accent);
-    font-size: 0.65rem;
-    margin-top: 8px;
-    flex-shrink: 0;
-    opacity: 0.7;
+    font-size: 0.8rem;
+    width: 20px;
+    text-align: center;
+    opacity: 0.8;
+}
+
+.exp-detail {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
 }
 
 .experience-tech {
@@ -1949,12 +1960,22 @@ img {
     }
 
     .experience-card {
-        padding: 22px;
+        padding: 20px 16px;
     }
 
-    .experience-list li {
-        font-size: 0.85rem;
-        line-height: 1.6;
+    .exp-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+        padding: 10px 14px;
+    }
+
+    .exp-what {
+        font-size: 0.82rem;
+    }
+
+    .exp-detail {
+        font-size: 0.8rem;
+        padding-left: 30px;
     }
 
     .experience-tech {
@@ -1962,7 +1983,7 @@ img {
     }
 
     .experience-tech span {
-        font-size: 0.7rem;
+        font-size: 0.68rem;
         padding: 4px 10px;
     }
 
