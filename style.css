@@ -1759,26 +1759,96 @@ img {
         display: flex;
     }
 
+    .hero {
+        padding: var(--nav-height) 15px 80px;
+    }
+
     .hero-content {
-        padding: 0 10px;
+        padding: 0 5px;
+    }
+
+    .hero-greeting {
+        margin-bottom: 15px;
+    }
+
+    .hero-hi {
+        font-size: 0.9rem;
+    }
+
+    .hero-name {
+        font-size: clamp(2.2rem, 8vw, 3.5rem);
+        margin-bottom: 8px;
+    }
+
+    .hero-tagline {
+        font-size: clamp(1.1rem, 3.5vw, 1.5rem);
+        margin-bottom: 15px;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+        margin-bottom: 25px;
+        line-height: 1.7;
     }
 
     .hero-stats {
         flex-wrap: wrap;
-        gap: 30px;
+        gap: 12px;
     }
 
     .hero-stat {
         padding: 12px 18px;
+        flex: 1 1 auto;
+        min-width: 120px;
+        text-align: center;
     }
 
     .hero-stat-number {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
+    .hero-stat-label {
+        font-size: 0.75rem;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        margin-bottom: 35px;
+    }
+
+    .btn {
+        justify-content: center;
+        padding: 12px 24px;
+        font-size: 0.85rem;
+    }
+
+    .hero-scroll {
+        display: none;
+    }
+
+    /* Sections */
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+        margin-bottom: 35px;
+        gap: 10px;
+    }
+
+    .section-number {
+        font-size: 0.85rem;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    /* About */
     .about-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 35px;
     }
 
     .about-image {
@@ -1786,86 +1856,281 @@ img {
     }
 
     .about-image-wrapper {
-        width: 220px;
-        height: 220px;
+        width: 200px;
+        height: 200px;
     }
 
+    .about-text p {
+        font-size: 0.92rem;
+    }
+
+    .about-tech-list {
+        gap: 6px 20px;
+    }
+
+    .about-tech-list li {
+        font-size: 0.8rem;
+    }
+
+    /* Skills */
     .skills-grid {
         grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .skill-category {
+        padding: 22px;
+        border-radius: 12px;
+    }
+
+    .skill-category-header h3 {
+        font-size: 1rem;
+    }
+
+    .skill-tags {
+        gap: 6px;
+    }
+
+    .skill-tag {
+        font-size: 0.72rem;
+        padding: 5px 12px;
+    }
+
+    /* Experience */
+    .experience-header {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .experience-role h3 {
+        font-size: 1.1rem;
+    }
+
+    .experience-card {
+        padding: 22px;
+    }
+
+    .experience-list li {
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
+
+    .experience-tech {
+        gap: 6px;
+    }
+
+    .experience-tech span {
+        font-size: 0.7rem;
+        padding: 4px 10px;
+    }
+
+    /* Projects */
+    .projects-featured {
+        gap: 50px;
     }
 
     .project-featured-card,
     .project-featured-card.reverse {
         grid-template-columns: 1fr;
         direction: ltr;
+        gap: 20px;
     }
 
     .project-image {
         aspect-ratio: 16/9;
     }
 
-    .experience-header {
-        flex-direction: column;
+    .project-title {
+        font-size: 1.3rem;
     }
 
+    .project-description {
+        padding: 18px;
+    }
+
+    .project-description p {
+        font-size: 0.85rem;
+    }
+
+    .project-tech-list {
+        gap: 8px;
+    }
+
+    .project-tech-list li {
+        font-size: 0.75rem;
+    }
+
+    /* Achievements */
+    .achievements-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .achievement-card {
+        padding: 22px 18px;
+    }
+
+    .achievement-card h3 {
+        font-size: 0.95rem;
+    }
+
+    .achievement-card p {
+        font-size: 0.82rem;
+        margin-bottom: 12px;
+    }
+
+    .achievement-icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 14px;
+    }
+
+    .achievement-icon i {
+        font-size: 1.1rem;
+    }
+
+    .achievement-platforms span {
+        font-size: 0.65rem;
+        padding: 3px 8px;
+    }
+
+    /* Education */
     .education-card {
         flex-direction: column;
         text-align: center;
+        padding: 25px 20px;
     }
 
     .education-meta {
         justify-content: center;
     }
 
-    .section {
-        padding: 70px 0;
+    .education-info h3 {
+        font-size: 1.15rem;
     }
 
-    .section-title {
-        font-size: 1.4rem;
+    /* Contact */
+    .contact {
+        padding: 80px 0;
     }
 
-    .hero-cta {
-        flex-direction: column;
+    .contact-title {
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
     }
 
-    .btn {
-        justify-content: center;
+    .contact-description {
+        font-size: 0.95rem;
+        margin-bottom: 30px;
     }
-}
 
-@media (max-width: 480px) {
+    .contact-socials {
+        gap: 15px;
+    }
+
+    .contact-social {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    .footer-content p {
+        font-size: 0.75rem;
+    }
+
+    /* Aurora performance */
     .aurora-bg {
         filter: blur(60px);
         opacity: 0.4;
     }
 
-    .grid-overlay {
-        display: none;
+    .aurora-blob-1 { width: 350px; height: 350px; }
+    .aurora-blob-2 { width: 300px; height: 300px; }
+    .aurora-blob-3 { width: 250px; height: 250px; }
+    .aurora-blob-4 { display: none; }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: var(--nav-height) 10px 60px;
     }
 
     .hero-name {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     .hero-tagline {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .hero-stats {
-        gap: 20px;
+        gap: 10px;
+    }
+
+    .hero-stat {
+        padding: 10px 14px;
+        min-width: 95px;
     }
 
     .hero-stat-number {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
+    }
+
+    .hero-stat-plus {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .section {
+        padding: 50px 0;
+    }
+
+    .about-image-wrapper {
+        width: 170px;
+        height: 170px;
     }
 
     .achievements-grid {
         grid-template-columns: 1fr;
     }
 
+    .grid-overlay {
+        display: none;
+    }
+
+    .aurora-blob-1 { width: 250px; height: 250px; }
+    .aurora-blob-2 { width: 200px; height: 200px; }
+    .aurora-blob-3 { display: none; }
+
     .cursor, .cursor-follower {
         display: none;
+    }
+
+    .mobile-link {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+
+    .project-icon-grid {
+        gap: 15px;
+        padding: 25px;
+    }
+
+    .project-icon-grid i {
+        font-size: 1.8rem;
+    }
+
+    .experience-timeline {
+        padding-left: 20px;
+    }
+
+    .timeline-dot {
+        left: -28px;
+        width: 14px;
+        height: 14px;
     }
 }
 
