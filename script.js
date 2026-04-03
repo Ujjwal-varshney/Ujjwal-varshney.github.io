@@ -307,11 +307,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const rotateElement = document.getElementById('hero-rotate');
     if (rotateElement && !prefersReducedMotion) {
         const words = [
-            'enterprise platforms.',
             'distributed systems.',
-            'AI-powered tools.',
             'scalable backends.',
-            'beautiful UIs.',
+            'AI-powered tools.',
+            'event-driven microservices.',
+            'full-stack solutions.',
         ];
         let wordIndex = 0;
         let charIndex = 0;
