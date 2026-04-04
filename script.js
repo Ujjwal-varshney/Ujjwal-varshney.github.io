@@ -582,6 +582,47 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // =========================================
+    // PROJECT IMAGE CAROUSEL
+    // =========================================
+    const carousel = document.querySelector('.project-carousel');
+    if (carousel) {
+        const imgs = carousel.querySelectorAll('.carousel-img');
+        const dots = carousel.querySelectorAll('.carousel-dot');
+        let currentSlide = 0;
+        let carouselInterval;
+
+        function showSlide(index) {
+            imgs.forEach(img => img.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            imgs[index].classList.add('active');
+            dots[index].classList.add('active');
+            currentSlide = index;
+        }
+
+        function nextSlide() {
+            showSlide((currentSlide + 1) % imgs.length);
+        }
+
+        // Auto rotate every 3 seconds
+        carouselInterval = setInterval(nextSlide, 3000);
+
+        // Click dots to navigate
+        dots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                showSlide(i);
+                clearInterval(carouselInterval);
+                carouselInterval = setInterval(nextSlide, 3000);
+            });
+        });
+
+        // Pause on hover
+        carousel.addEventListener('mouseenter', () => clearInterval(carouselInterval));
+        carousel.addEventListener('mouseleave', () => {
+            carouselInterval = setInterval(nextSlide, 3000);
+        });
+    }
+
+    // =========================================
     // SKILL TAG GLOW ON HOVER (desktop only)
     // =========================================
     if (!isTouchDevice) {
