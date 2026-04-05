@@ -443,6 +443,25 @@ img {
     color: var(--accent);
 }
 
+.mobile-resume-btn {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    color: var(--accent);
+    border: 1px solid rgba(var(--accent-rgb), 0.5);
+    padding: 12px 28px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    transition: var(--transition);
+    background: rgba(var(--accent-rgb), 0.05);
+}
+
+.mobile-resume-btn:hover {
+    background: rgba(var(--accent-rgb), 0.12);
+}
+
 /* =============================================
    HERO SECTION
    ============================================= */
