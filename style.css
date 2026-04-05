@@ -1100,11 +1100,6 @@ img {
     box-shadow: 0 0 20px rgba(var(--accent-rgb), 0.1);
 }
 
-.skill-tag[data-level="expert"] {
-    border-color: rgba(var(--accent-rgb), 0.25);
-    color: var(--accent);
-    background: rgba(var(--accent-rgb), 0.05);
-}
 
 /* =============================================
    EXPERIENCE SECTION
